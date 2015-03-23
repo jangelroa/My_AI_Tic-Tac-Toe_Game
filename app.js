@@ -69,7 +69,7 @@ function winner_is( state, player ) {
       cl( "row starting with index " + i );
 
       if( check_horizontal_lines( i, player ) ) {
-        cl("row starting with index " + i + " is a WINNER line" );
+        cl("row starting with index " + i + " is a WINNER line for player \"" + player + "\"" );
         return true;
       }
   }
@@ -82,7 +82,7 @@ function winner_is( state, player ) {
       cl( "column starting with index " + i );
 
       if( check_vertical_lines( i, player ) ) {
-        cl("column starting with index " + i + " is a WINNER line" );
+        cl("column starting with index " + i + " is a WINNER line for player \"" + player + "\"" );
         return true;
       }
   }
@@ -91,7 +91,14 @@ function winner_is( state, player ) {
   cl("");
   cl("checking diagonal lines for player = \"" + player + "\":");
 
-
+  for( var i = 0 ; i <= 2 ; i += 2 ) {
+      cl( "" );
+      cl( "diagonal starting with index " + i );
+    if( check_diagonal_lines( i, player ) ) {
+      cl("diagonal starting with index " + i + " is a WINNER line for player \"" + player + "\"" );
+      return true;
+    }
+  }
 
   return false;
 } // end of winner_is( state, player )
@@ -110,7 +117,7 @@ function check_horizontal_lines( index, player ) {
   var is_this_a_winner_line = true;
 
   for( var j = index ; j <= index+2 ; j++ ) {
-      if( show_console ) {  console.log("index",j, state[j]); }
+      cl("index " + j + ": " + state[j]);
       if( state[j] !== player ) {
         is_this_a_winner_line = false;
       }
@@ -132,7 +139,7 @@ function check_vertical_lines( index, player ) {
   var is_this_a_winner_line = true;
 
   for( var j = index ; j <= index+6 ; j += 3 ) {
-      if( show_console ) {  console.log("index",j, state[j]); }
+      cl("index " + j + ": " + state[j]);
       if( state[j] !== player ) {
         is_this_a_winner_line = false;
       }
@@ -140,12 +147,61 @@ function check_vertical_lines( index, player ) {
   return is_this_a_winner_line;
 } // end of check_vertical_lines( index, player )
 
+//*******************************************************************
+//         check_diagonal_lines( index, player )
+//*******************************************************************
+// Task: Check if the diagonal line starting with "index" is a
+//       winner line for "player".
+// @param: index -  index of the state array.
+// @param: player -  "X" or "O".
+// @return: True if this is a winner line or false otherwise.
+//
+function check_diagonal_lines( index, player ) {
+
+  var is_this_a_winner_line = true;
+  var increment_to_build_diagonal = 4;
+  var last_index = 8;
+  if(index === 2) {
+    increment_to_build_diagonal = 2;
+    last_index = 6
+  }
+
+  for( var j = index ; j <= last_index ; j += increment_to_build_diagonal ) {
+      cl("index " + j + ": " + state[j]);
+      if( state[j] !== player ) {
+        is_this_a_winner_line = false;
+      }
+  }
+  return is_this_a_winner_line;
+} // end of check_diagonal_lines( index, player )
 
 
 
-var state = ["X","O","_","X","O","X","_","O","O"];
-cl(is_X_winner( state ));
-cl(is_O_winner( state ));
+// state indexes
+// var state = [ 0, 1, 2,
+
+//               3, 4, 5,
+
+//               6, 7, 8
+//             ];
+
+var state = [ "X", "O", "O",
+
+              "X", "O", "X",
+
+              "O", "_", "O"
+            ];
+
+if(is_X_winner( state )) {
+  cl( "X is the WINNER" );
+} else if(is_O_winner( state )) {
+  cl( "O is the WINNER" );
+}else {
+  cl( "There is NO Winner" );
+}
+
+// cl(is_X_winner( state ));
+// cl(is_O_winner( state ));
 
 
 
