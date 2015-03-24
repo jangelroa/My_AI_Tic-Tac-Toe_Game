@@ -8,30 +8,23 @@
 var show_console = true;
 
 //*******************************************************************
-//         cl( arg1, arg2, arg3 )
+//                       cl( arg )
 //*******************************************************************
-// Task: Turn on and off all the console.logs.
-// @params arg1, arg2, arg3 -  params for console.log
-// @return No need it.
+// Task:    Turn on and off all the console.logs.
+// @param:  arg -  What we want to console.log
+// @return: No need it.
 //
-function cl( arg1, arg2, arg3 ) {
+function cl( arg ) {
   if( show_console ) {
-
-    if( arg3 ) {
-      console.log( arg1, arg2, arg3 );
-    } else if( arg2 ) {
-      console.log( arg1, arg2 );
-    }else {
-      console.log( arg1 );
-    }
+      console.log( arg );
   }
-} // end of cl( arg1, arg2, arg3 ) {}
+} // end of cl( arg ) {}
 
 //*******************************************************************
 //                  is_X_winner( state )
 //*******************************************************************
-// Task: Call winner_is with "state" and "X" as params.
-// @param: state -  array of the sate of the game.
+// Task:    Call winner_is with "state" and "X" as params.
+// @param:  state -  array of the sate of the game.
 // @return: The result of calling winner_is( state, "X").
 //
 function is_X_winner( state ) {
@@ -42,8 +35,8 @@ function is_X_winner( state ) {
 //*******************************************************************
 //                  is_O_winner( state )
 //*******************************************************************
-// Task: Call winner_is with "state" and "O" as params.
-// @param: state -  array of the sate of the game.
+// Task:    Call winner_is with "state" and "O" as params.
+// @param:  state -  array of the sate of the game.
 // @return: The result of calling winner_is( state, "O").
 //
 function is_O_winner( state ) {
@@ -54,10 +47,10 @@ function is_O_winner( state ) {
 //*******************************************************************
 //                winner_is( state, player )
 //*******************************************************************
-//  Task: Check if player won the game.
-//  @param: state -  array of the sate of the game.
-//  @param: player -  "X" or "O".
-//  @return: True if player won the game or false otherwise.
+// Task:    Check if player won the game.
+// @param:  state -  array of the sate of the game.
+// @param:  player -  "X" or "O".
+// @return: True if player won the game or false otherwise.
 //
 function winner_is( state, player ) {
 
@@ -106,10 +99,10 @@ function winner_is( state, player ) {
 //*******************************************************************
 //         check_horizontal_line( index, player )
 //*******************************************************************
-// Task: Check if the horizontal line starting with "index" is a
-//       winner line for "player".
-// @param: index -  index of the state array.
-// @param: player -  "X" or "O".
+// Task:    Check if the horizontal line starting with "index" is a
+//          winner line for "player".
+// @param:  index -  index of the state array.
+// @param:  player -  "X" or "O".
 // @return: True if this is a winner line or false otherwise.
 //
 function check_horizontal_lines( index, player ) {
@@ -128,10 +121,10 @@ function check_horizontal_lines( index, player ) {
 //*******************************************************************
 //         check_vertical_lines( index, player )
 //*******************************************************************
-// Task: Check if the vertical line starting with "index" is a
-//       winner line for "player".
-// @param: index -  index of the state array.
-// @param: player -  "X" or "O".
+// Task:    Check if the vertical line starting with "index" is a
+//          winner line for "player".
+// @param:  index -  index of the state array.
+// @param:  player -  "X" or "O".
 // @return: True if this is a winner line or false otherwise.
 //
 function check_vertical_lines( index, player ) {
@@ -150,10 +143,10 @@ function check_vertical_lines( index, player ) {
 //*******************************************************************
 //         check_diagonal_lines( index, player )
 //*******************************************************************
-// Task: Check if the diagonal line starting with "index" is a
-//       winner line for "player".
-// @param: index -  index of the state array.
-// @param: player -  "X" or "O".
+// Task:    Check if the diagonal line starting with "index" is a
+//          winner line for "player".
+// @param:  index -  index of the state array.
+// @param:  player -  "X" or "O".
 // @return: True if this is a winner line or false otherwise.
 //
 function check_diagonal_lines( index, player ) {
@@ -185,25 +178,77 @@ function check_diagonal_lines( index, player ) {
 //               6, 7, 8
 //             ];
 
-var state = [ "X", "O", "O",
+var state = [ "X", "_", "_",
 
-              "X", "O", "X",
+              "_", "X", "_",
 
-              "O", "_", "O"
+              "_", "_", "_"
             ];
 
 if(is_X_winner( state )) {
-  cl( "X is the WINNER" );
+  cl( "\"X\" is the WINNER" );
 } else if(is_O_winner( state )) {
-  cl( "O is the WINNER" );
+  cl( "\"O\" is the WINNER" );
 }else {
   cl( "There is NO Winner" );
 }
 
-// cl(is_X_winner( state ));
-// cl(is_O_winner( state ));
+//*******************************************************************
+//              board_is_full( state )
+//*******************************************************************
+// Task:    Check if the board is full.
+// @param:  state -  array of the sate of the game.
+// @return: True if the board is full or false otherwise.
+//
+function board_is_full( state ) {
+  // var board_is_full = true;
+  for( var i = 0 ; i < state.length ; i++ ) {
+    if( state[i] === "_" ) { return false; }
+  }
+  return true;
+} // end of board_is_full( state )
 
 
+//*******************************************************************
+//              minimax( state, depth )
+//*******************************************************************
+// Task:    Get the maximum score index among of the next possible
+//          movements.
+// @param:  state -  array of the sate of the game.
+// @param:  depth -  following movement level.
+// @return: True if this is a winner line or false otherwise.
+//
+function minimax( state, depth ) {
+
+        cl("state = " + state);
+  depth++;
+  var scores = moves = [];
+  if( is_X_winner( state ) ) {
+    return ( 10 - depth );
+  } else if( is_O_winner( state ) ) {
+    return ( depth - 10 );
+  } else if( board_is_full( state ) ) {
+    return 0;
+  }
+
+// if it's X's turn
+  if( (depth % 2) !== 0 ){
+    // Create all possible moves (states)
+    for( var i = 0 ; i < state.length ; i++ ) {
+      if( state[i] === "_" ){
+        var move = state.slice();
+        // var move = state;
+        move[i] = "X";
+        cl("move = " + move);
+        moves.push(move);
+        // scores.push( minimax ( move, depth ) );
+
+      }
+    }
+    cl("moves = " + moves);
+  }
+} // end of minimax( state, depth )
 
 
+cl("minimax call " + minimax( state, 0 ));
 
