@@ -178,11 +178,11 @@ function check_diagonal_lines( index, player ) {
 //               6, 7, 8
 //             ];
 
-var state = [ "X", "_", "_",
+var state = [ "X", "O", "X",
 
-              "_", "X", "_",
+              "O", "X", "_",
 
-              "_", "_", "_"
+              "X", "_", "O"
             ];
 
 if(is_X_winner( state )) {
@@ -222,7 +222,8 @@ function minimax( state, depth ) {
 
         cl("state = " + state);
   depth++;
-  var scores = moves = [];
+  var scores = [],
+      moves = [];
   if( is_X_winner( state ) ) {
     return ( 10 - depth );
   } else if( is_O_winner( state ) ) {
@@ -238,9 +239,9 @@ function minimax( state, depth ) {
     for( var i = 0 ; i < state.length ; i++ ) {
       if( state[i] === "_" ){
         var move = state.slice();
-        var move = state;
+        // var move = state;
         move[i] = "X";
-//         cl("move = " + move);
+        cl("move = " + move);
         cl(move);
         moves.push(move);
         scores.push( minimax ( move, depth ) );
@@ -262,6 +263,37 @@ function minimax( state, depth ) {
     cl("max_score = " + max_score);
     // Select the move with the max score index - moves[max_score_index]
     return max_score;
+
+  } else {
+    // Create all possible moves (states)
+    cl("posible moves for player \"O\"");
+    for( var i = 0 ; i < state.length ; i++ ) {
+      if( state[i] === "_" ){
+        var move = state.slice();
+        // var move = state;
+        move[i] = "O";
+        cl("move = " + move);
+        cl(move);
+        moves.push(move);
+        scores.push( minimax ( move, depth ) );
+        // scores = [9,2,-5,7,0,4,4];
+      }
+    }
+    cl("moves = " + moves);
+    cl("scores = " + scores);
+    // get the min score index in scores
+    var min_score_index = 0;
+    var min_score = scores[0];
+    for(var i = 1 ; i < scores.length ; i++ ) {
+      if( scores[i] > min_score ) {
+        min_score_index = i;
+        min_score = scores[i];
+      }
+    }
+    cl("min_score_index = " + min_score_index);
+    cl("min_score = " + min_score);
+    // Select the move with the min score index - moves[max_score_index]
+    return min_score;
 
 
   }
