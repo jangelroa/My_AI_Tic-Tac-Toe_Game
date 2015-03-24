@@ -234,19 +234,41 @@ function minimax( state, depth ) {
 // if it's X's turn
   if( (depth % 2) !== 0 ){
     // Create all possible moves (states)
+    cl("posible moves for player \"X\"");
     for( var i = 0 ; i < state.length ; i++ ) {
       if( state[i] === "_" ){
         var move = state.slice();
-        // var move = state;
+        var move = state;
         move[i] = "X";
-        cl("move = " + move);
+//         cl("move = " + move);
+        cl(move);
         moves.push(move);
-        // scores.push( minimax ( move, depth ) );
-
+        scores.push( minimax ( move, depth ) );
+        // scores = [9,2,-5,7,0,4,4];
       }
     }
     cl("moves = " + moves);
+    cl("scores = " + scores);
+    // get the max score index in scores
+    var max_score_index = 0;
+    var max_score = scores[0];
+    for(var i = 1 ; i < scores.length ; i++ ) {
+      if( scores[i] > max_score ) {
+        max_score_index = i;
+        max_score = scores[i];
+      }
+    }
+    cl("max_score_index = " + max_score_index);
+    cl("max_score = " + max_score);
+    // Select the move with the max score index - moves[max_score_index]
+    return max_score;
+
+
   }
+
+
+
+
 } // end of minimax( state, depth )
 
 
