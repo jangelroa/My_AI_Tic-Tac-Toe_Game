@@ -1,8 +1,10 @@
 // Program:     Unbeatable Tic-Tac-Toe Game
-// Description:
-//              Build a Tic-Tac-Toe game that never can be defeated.
-
+// Description: Build a Tic-Tac-Toe game that never can be defeated.
+//              It uses the minimax recursive algorithm.
 // Author:      Angel Roa
+// Email:       jangelroa@gmail.com
+// Website:     www.jangelroa.com
+// LinkedIn:    https://www.linkedin.com/in/jangelroa
 // Date:        March 23, 2015
 
 var show_console = true;
@@ -11,7 +13,7 @@ var show_console = true;
 //                       cl( arg )
 //*******************************************************************
 // Task:    Turn on and off all the console.logs.
-// @param:  arg -  What we want to console.log
+// @param:  arg - What we want to console.log
 // @return: No need it.
 //
 function cl( arg ) {
@@ -24,7 +26,7 @@ function cl( arg ) {
 //                  is_X_winner( state )
 //*******************************************************************
 // Task:    Call winner_is with "state" and "X" as params.
-// @param:  state -  array of the sate of the game.
+// @param:  state - array of the state of the game.
 // @return: The result of calling winner_is( state, "X").
 //
 function is_X_winner( state ) {
@@ -36,7 +38,7 @@ function is_X_winner( state ) {
 //                  is_O_winner( state )
 //*******************************************************************
 // Task:    Call winner_is with "state" and "O" as params.
-// @param:  state -  array of the sate of the game.
+// @param:  state -  array of the state of the game.
 // @return: The result of calling winner_is( state, "O").
 //
 function is_O_winner( state ) {
@@ -48,47 +50,50 @@ function is_O_winner( state ) {
 //                winner_is( state, player )
 //*******************************************************************
 // Task:    Check if player won the game.
-// @param:  state -  array of the sate of the game.
+// @param:  state -  array of the state of the game.
 // @param:  player -  "X" or "O".
 // @return: True if player won the game or false otherwise.
 //
 function winner_is( state, player ) {
 
 //checking horizontal lines
-  cl("");
-  cl("checking horizontal lines for player = \"" + player + "\":");
+  // console.log("");
+  // console.log("checking horizontal lines for player = \"" + player + "\":");
   for( var i = 0 ; i <= 6 ; i += 3 ) {
-      cl( "" );
-      cl( "row starting with index " + i );
+      // console.log( "" );
+      // console.log( "row starting with index " + i );
 
-      if( check_horizontal_lines( i, player ) ) {
-        cl("row starting with index " + i + " is a WINNER line for player \"" + player + "\"" );
+      if( check_horizontal_lines( state, i, player ) ) {
+        console.log("row starting with index " + i + " is a WINNER line for player \""
+           + player + "\"" );
         return true;
       }
   }
 
 //checking vertical lines
-  cl("");
-  cl("checking vertical lines for player = \"" + player + "\":");
+  // console.log("");
+  // console.log("checking vertical lines for player = \"" + player + "\":");
   for( var i = 0 ; i <= 2 ; i ++ ) {
-      cl( "" );
-      cl( "column starting with index " + i );
+      // console.log( "" );
+      // console.log( "column starting with index " + i );
 
-      if( check_vertical_lines( i, player ) ) {
-        cl("column starting with index " + i + " is a WINNER line for player \"" + player + "\"" );
+      if( check_vertical_lines( state, i, player ) ) {
+        console.log("column starting with index " + i + " is a WINNER line for player \""
+           + player + "\"" );
         return true;
       }
   }
 
 //checking diagonal lines
-  cl("");
-  cl("checking diagonal lines for player = \"" + player + "\":");
+  // console.log("");
+  // console.log("checking diagonal lines for player = \"" + player + "\":");
 
   for( var i = 0 ; i <= 2 ; i += 2 ) {
-      cl( "" );
-      cl( "diagonal starting with index " + i );
-    if( check_diagonal_lines( i, player ) ) {
-      cl("diagonal starting with index " + i + " is a WINNER line for player \"" + player + "\"" );
+      // console.log( "" );
+      // console.log( "diagonal starting with index " + i );
+    if( check_diagonal_lines( state, i, player ) ) {
+      console.log("diagonal starting with index " + i + " is a WINNER line for player \""
+         + player + "\"" );
       return true;
     }
   }
@@ -97,59 +102,62 @@ function winner_is( state, player ) {
 } // end of winner_is( state, player )
 
 //*******************************************************************
-//         check_horizontal_line( index, player )
+//         check_horizontal_lines( state, index, player )
 //*******************************************************************
 // Task:    Check if the horizontal line starting with "index" is a
 //          winner line for "player".
+// @param:  state - array of the state of the game.
 // @param:  index -  index of the state array.
 // @param:  player -  "X" or "O".
 // @return: True if this is a winner line or false otherwise.
 //
-function check_horizontal_lines( index, player ) {
+function check_horizontal_lines( state, index, player ) {
 
   var is_this_a_winner_line = true;
 
   for( var j = index ; j <= index+2 ; j++ ) {
-      cl("index " + j + ": " + state[j]);
+      // console.log("index " + j + ": " + state[j]);
       if( state[j] !== player ) {
         is_this_a_winner_line = false;
       }
   }
   return is_this_a_winner_line;
-} // end of check_horizontal_line( index, player )
+} // end of check_horizontal_lines( state, index, player )
 
 //*******************************************************************
-//         check_vertical_lines( index, player )
+//         check_vertical_lines( state, index, player )
 //*******************************************************************
 // Task:    Check if the vertical line starting with "index" is a
 //          winner line for "player".
+// @param:  state - array of the state of the game.
 // @param:  index -  index of the state array.
 // @param:  player -  "X" or "O".
 // @return: True if this is a winner line or false otherwise.
 //
-function check_vertical_lines( index, player ) {
+function check_vertical_lines( state, index, player ) {
 
   var is_this_a_winner_line = true;
 
   for( var j = index ; j <= index+6 ; j += 3 ) {
-      cl("index " + j + ": " + state[j]);
+      // console.log("index " + j + ": " + state[j]);
       if( state[j] !== player ) {
         is_this_a_winner_line = false;
       }
   }
   return is_this_a_winner_line;
-} // end of check_vertical_lines( index, player )
+} // end of check_vertical_lines( state, index, player )
 
 //*******************************************************************
-//         check_diagonal_lines( index, player )
+//         check_diagonal_lines( state, index, player )
 //*******************************************************************
 // Task:    Check if the diagonal line starting with "index" is a
 //          winner line for "player".
+// @param:  state - array of the state of the game.
 // @param:  index -  index of the state array.
 // @param:  player -  "X" or "O".
 // @return: True if this is a winner line or false otherwise.
 //
-function check_diagonal_lines( index, player ) {
+function check_diagonal_lines( state, index, player ) {
 
   var is_this_a_winner_line = true;
   var increment_to_build_diagonal = 4;
@@ -160,15 +168,13 @@ function check_diagonal_lines( index, player ) {
   }
 
   for( var j = index ; j <= last_index ; j += increment_to_build_diagonal ) {
-      cl("index " + j + ": " + state[j]);
+      // console.log("index " + j + ": " + state[j]);
       if( state[j] !== player ) {
         is_this_a_winner_line = false;
       }
   }
   return is_this_a_winner_line;
-} // end of check_diagonal_lines( index, player )
-
-
+} // end of check_diagonal_lines( state, index, player )
 
 // state indexes
 // var state = [ 0, 1, 2,
@@ -182,22 +188,22 @@ var state = [ "X", "O", "X",
 
               "O", "X", "_",
 
-              "X", "_", "O"
+              "O", "_", "O"
             ];
 
-if(is_X_winner( state )) {
-  cl( "\"X\" is the WINNER" );
-} else if(is_O_winner( state )) {
-  cl( "\"O\" is the WINNER" );
-}else {
-  cl( "There is NO Winner" );
-}
+// if(is_X_winner( state )) {
+//   console.log( "\"X\" is the WINNER" );
+// } else if(is_O_winner( state )) {
+//   console.log( "\"O\" is the WINNER" );
+// }else {
+//   console.log( "There is NO Winner" );
+// }
 
 //*******************************************************************
 //              board_is_full( state )
 //*******************************************************************
 // Task:    Check if the board is full.
-// @param:  state -  array of the sate of the game.
+// @param:  state -  array of the state of the game.
 // @return: True if the board is full or false otherwise.
 //
 function board_is_full( state ) {
@@ -208,48 +214,65 @@ function board_is_full( state ) {
   return true;
 } // end of board_is_full( state )
 
-
+  var scores,
+      moves;
 //*******************************************************************
 //              minimax( state, depth )
 //*******************************************************************
 // Task:    Get the maximum score index among of the next possible
 //          movements.
-// @param:  state -  array of the sate of the game.
+// @param:  state -  array of the state of the game.
 // @param:  depth -  following movement level.
 // @return: True if this is a winner line or false otherwise.
 //
 function minimax( state, depth ) {
 
-        cl("state = " + state);
   depth++;
-  var scores = [],
-      moves = [];
+  console.log("state = " + state);
+  console.log(" DEPTH " + depth + " DEPTH " + depth + " DEPTH " + depth + " DEPTH " + depth + " DEPTH " + depth + " DEPTH " + depth + " DEPTH " + depth + " DEPTH " + depth + " DEPTH " + depth );
+
   if( is_X_winner( state ) ) {
+    console.log("X is a winner - score = " + ( 10-depth ));
     return ( 10 - depth );
   } else if( is_O_winner( state ) ) {
+    console.log("O is a winner - score = " + ( depth - 10 ));
     return ( depth - 10 );
   } else if( board_is_full( state ) ) {
+    console.log("There is no winner - score = 0 ");
     return 0;
   }
 
-// if it's X's turn
+  scores = [];
+  moves = [];
+
+// if it's X's turn, get the max score
   if( (depth % 2) !== 0 ){
     // Create all possible moves (states)
-    cl("posible moves for player \"X\"");
     for( var i = 0 ; i < state.length ; i++ ) {
       if( state[i] === "_" ){
         var move = state.slice();
         // var move = state;
         move[i] = "X";
-        cl("move = " + move);
-        cl(move);
+        console.log("move = " + move);
+        console.log(move);
         moves.push(move);
-        scores.push( minimax ( move, depth ) );
-        // scores = [9,2,-5,7,0,4,4];
+        console.log("AAAAAAAAAAAAAAAAAAAAAAAAA", moves);
       }
     }
-    cl("moves = " + moves);
-    cl("scores = " + scores);
+    console.log("moves.length = " + moves.length);
+    console.log("moves for X = " + moves);
+    console.log(moves);
+    console.log("moves[0] = " + moves[0]);
+    console.log(moves[0]);
+    console.log("moves[1] = " + moves[1]);
+    console.log(moves[1]);
+    for(var i = 0 ; i < moves.length ; i++ ){
+        console.log("CCCCCCCCCCCCCCCCCCCCCCCCC", i);
+      scores.push( minimax ( moves[i], depth ) );
+    }
+    // scores.push( minimax ( moves[0], depth ) );
+    // scores.push( minimax ( moves[1], depth ) );
+    console.log("scores.length = " + scores.length);
     // get the max score index in scores
     var max_score_index = 0;
     var max_score = scores[0];
@@ -259,28 +282,36 @@ function minimax( state, depth ) {
         max_score = scores[i];
       }
     }
-    cl("max_score_index = " + max_score_index);
-    cl("max_score = " + max_score);
     // Select the move with the max score index - moves[max_score_index]
+    console.log("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+    console.log("depth = " + depth);
+    console.log("possible moves for player \"X\"");
+    console.log("moves for X = " + moves);
+    console.log(moves);
+    console.log("scores for X = " + scores);
+    console.log(scores);
+    console.log("max_score for X = " + max_score);
+    console.log(max_score);
+    console.log("max_score_index for X = " + max_score_index);
+    console.log(max_score_index);
     return max_score;
 
-  } else {
+  } else {    // it's O's turn, get the min score
     // Create all possible moves (states)
-    cl("posible moves for player \"O\"");
     for( var i = 0 ; i < state.length ; i++ ) {
       if( state[i] === "_" ){
         var move = state.slice();
         // var move = state;
         move[i] = "O";
-        cl("move = " + move);
-        cl(move);
+        console.log("move = " + move);
+        console.log(move);
         moves.push(move);
-        scores.push( minimax ( move, depth ) );
-        // scores = [9,2,-5,7,0,4,4];
+        console.log("BBBBBBBBBBBBBBBBBBBBBBBBB", moves);
       }
     }
-    cl("moves = " + moves);
-    cl("scores = " + scores);
+    for(var i = 0 ; i < moves.length ; i++ ){
+      scores.push( minimax ( moves[i], depth ) );
+    }
     // get the min score index in scores
     var min_score_index = 0;
     var min_score = scores[0];
@@ -290,9 +321,18 @@ function minimax( state, depth ) {
         min_score = scores[i];
       }
     }
-    cl("min_score_index = " + min_score_index);
-    cl("min_score = " + min_score);
     // Select the move with the min score index - moves[max_score_index]
+    console.log("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
+    console.log("depth = " + depth);
+    console.log("possible moves for player \"O\"");
+    console.log("moves for O = " + moves);
+    console.log(moves);
+    console.log("scores for O = " + scores);
+    console.log(scores);
+    console.log("min_score for O = " + min_score);
+    console.log(min_score);
+    console.log("min_score_index for O = " + min_score_index);
+    console.log(min_score_index);
     return min_score;
 
 
@@ -304,5 +344,5 @@ function minimax( state, depth ) {
 } // end of minimax( state, depth )
 
 
-cl("minimax call " + minimax( state, 0 ));
+console.log("minimax call " + minimax( state, 0 ));
 
