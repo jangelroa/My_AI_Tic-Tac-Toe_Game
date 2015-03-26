@@ -1,0 +1,88 @@
+Tic-Tac-Toe:231 state = X,O,X,O,X,_,O,_,O
+Tic-Tac-Toe:232  DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1
+Tic-Tac-Toe:256 move = X,O,X,O,X,X,O,_,O
+Tic-Tac-Toe:257 ["X", "O", "X", "O", "X", "X", "O", "_", "O"]
+Tic-Tac-Toe:231 state = X,O,X,O,X,X,O,_,O
+Tic-Tac-Toe:232  DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2
+Tic-Tac-Toe:293 move = X,O,X,O,X,X,O,O,O
+Tic-Tac-Toe:294 ["X", "O", "X", "O", "X", "X", "O", "O", "O"]
+Tic-Tac-Toe:231 state = X,O,X,O,X,X,O,O,O
+Tic-Tac-Toe:232  DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3
+Tic-Tac-Toe:67 row starting with index 6 is a WINNER line for player "O"
+Tic-Tac-Toe:238 O is a winner - score = -7
+Tic-Tac-Toe:310 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+Tic-Tac-Toe:311 depth = 2
+Tic-Tac-Toe:312 possible moves for player "O"
+Tic-Tac-Toe:313 moves for O = X,O,X,O,X,X,O,O,O
+Tic-Tac-Toe:314 [Array[9]]
+Tic-Tac-Toe:315 scores for O = -7
+Tic-Tac-Toe:316 [-7]
+Tic-Tac-Toe:317 min_score for O = -7
+Tic-Tac-Toe:318 -7
+Tic-Tac-Toe:319 min_score_index for O = 0
+Tic-Tac-Toe:320 0
+Tic-Tac-Toe:256 move = X,O,X,O,X,_,O,X,O
+Tic-Tac-Toe:257 ["X", "O", "X", "O", "X", "_", "O", "X", "O"]
+Tic-Tac-Toe:231 state = X,O,X,O,X,_,O,X,O
+Tic-Tac-Toe:232  DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2
+Tic-Tac-Toe:293 move = X,O,X,O,X,O,O,X,O
+Tic-Tac-Toe:294 ["X", "O", "X", "O", "X", "O", "O", "X", "O"]
+Tic-Tac-Toe:231 state = X,O,X,O,X,O,O,X,O
+Tic-Tac-Toe:232  DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3
+Tic-Tac-Toe:241 There is no winner - score = 0
+Tic-Tac-Toe:310 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+Tic-Tac-Toe:311 depth = 2
+Tic-Tac-Toe:312 possible moves for player "O"
+Tic-Tac-Toe:313 moves for O = X,O,X,O,X,O,O,X,O
+Tic-Tac-Toe:314 [Array[9]]
+Tic-Tac-Toe:315 scores for O = 0
+Tic-Tac-Toe:316 [0]
+Tic-Tac-Toe:317 min_score for O = 0
+Tic-Tac-Toe:318 0
+Tic-Tac-Toe:319 min_score_index for O = 0
+Tic-Tac-Toe:320 0
+Tic-Tac-Toe:273 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Tic-Tac-Toe:274 depth = 1
+Tic-Tac-Toe:275 possible moves for player "X"
+Tic-Tac-Toe:276 moves for X = X,O,X,O,X,O,O,X,O
+Tic-Tac-Toe:277 [Array[9]]
+Tic-Tac-Toe:278 scores for X = 0
+Tic-Tac-Toe:279 [0]
+Tic-Tac-Toe:280 max_score for X = 0
+Tic-Tac-Toe:281 0
+Tic-Tac-Toe:282 max_score_index for X = 0
+Tic-Tac-Toe:283 0
+Tic-Tac-Toe:332 minimax call 0
+Tic-Tac-Toe:1 undefined
+
+
+
+
+
+
+
+Tic-Tac-Toe:231 state = X,O,X,O,X,_,O,_,O
+Tic-Tac-Toe:232  DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1
+Tic-Tac-Toe:256 move = X,O,X,O,X,X,O,_,O
+Tic-Tac-Toe:257 ["X", "O", "X", "O", "X", "X", "O", "_", "O"]
+Tic-Tac-Toe:256 move = X,O,X,O,X,_,O,X,O
+Tic-Tac-Toe:257 ["X", "O", "X", "O", "X", "_", "O", "X", "O"]
+Tic-Tac-Toe:273 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Tic-Tac-Toe:274 depth = 1
+Tic-Tac-Toe:275 possible moves for player "X"
+Tic-Tac-Toe:276 moves for X = X,O,X,O,X,X,O,_,O,X,O,X,O,X,_,O,X,O
+Tic-Tac-Toe:277 [Array[9], Array[9]]
+Tic-Tac-Toe:278 scores for X =
+Tic-Tac-Toe:279 []
+Tic-Tac-Toe:280 max_score for X = undefined
+Tic-Tac-Toe:281 undefined
+Tic-Tac-Toe:282 max_score_index for X = 0
+Tic-Tac-Toe:283 0
+Tic-Tac-Toe:332 minimax call undefined
+Tic-Tac-Toe:1 undefined
+
+
+
+
+
+

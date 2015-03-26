@@ -184,11 +184,19 @@ function check_diagonal_lines( state, index, player ) {
 //               6, 7, 8
 //             ];
 
-var state = [ "X", "O", "X",
+// var state = [ "O", "_", "O",
+
+//               "O", "X", "_",
+
+//               "X", "_", "X"
+//             ];
+
+
+var state = [ "O", "_", "_",
 
               "O", "X", "_",
 
-              "O", "_", "O"
+              "_", "_", "X"
             ];
 
 // if(is_X_winner( state )) {
@@ -214,8 +222,7 @@ function board_is_full( state ) {
   return true;
 } // end of board_is_full( state )
 
-  var scores,
-      moves;
+
 //*******************************************************************
 //              minimax( state, depth )
 //*******************************************************************
@@ -242,8 +249,8 @@ function minimax( state, depth ) {
     return 0;
   }
 
-  scores = [];
-  moves = [];
+  var scores = [];
+  var moves = [];
 
 // if it's X's turn, get the max score
   if( (depth % 2) !== 0 ){

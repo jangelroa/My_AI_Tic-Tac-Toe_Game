@@ -1,0 +1,468 @@
+Tic-Tac-Toe:230 state = X,O,X,O,X,_,O,_,O
+Tic-Tac-Toe:231  DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1 DEPTH 1
+Tic-Tac-Toe:59
+Tic-Tac-Toe:60 checking horizontal lines for player = "X":
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 0
+Tic-Tac-Toe:118 index 0: X
+Tic-Tac-Toe:118 index 1: O
+Tic-Tac-Toe:118 index 2: X
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 3
+Tic-Tac-Toe:118 index 3: O
+Tic-Tac-Toe:118 index 4: X
+Tic-Tac-Toe:118 index 5: _
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 6
+Tic-Tac-Toe:118 index 6: O
+Tic-Tac-Toe:118 index 7: _
+Tic-Tac-Toe:118 index 8: O
+Tic-Tac-Toe:73
+Tic-Tac-Toe:74 checking vertical lines for player = "X":
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 0
+Tic-Tac-Toe:141 index 0: X
+Tic-Tac-Toe:141 index 3: O
+Tic-Tac-Toe:141 index 6: O
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 1
+Tic-Tac-Toe:141 index 1: O
+Tic-Tac-Toe:141 index 4: X
+Tic-Tac-Toe:141 index 7: _
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 2
+Tic-Tac-Toe:141 index 2: X
+Tic-Tac-Toe:141 index 5: _
+Tic-Tac-Toe:141 index 8: O
+Tic-Tac-Toe:87
+Tic-Tac-Toe:88 checking diagonal lines for player = "X":
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 0
+Tic-Tac-Toe:170 index 0: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 8: O
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 2
+Tic-Tac-Toe:170 index 2: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 6: O
+Tic-Tac-Toe:59
+Tic-Tac-Toe:60 checking horizontal lines for player = "O":
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 0
+Tic-Tac-Toe:118 index 0: X
+Tic-Tac-Toe:118 index 1: O
+Tic-Tac-Toe:118 index 2: X
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 3
+Tic-Tac-Toe:118 index 3: O
+Tic-Tac-Toe:118 index 4: X
+Tic-Tac-Toe:118 index 5: _
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 6
+Tic-Tac-Toe:118 index 6: O
+Tic-Tac-Toe:118 index 7: _
+Tic-Tac-Toe:118 index 8: O
+Tic-Tac-Toe:73
+Tic-Tac-Toe:74 checking vertical lines for player = "O":
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 0
+Tic-Tac-Toe:141 index 0: X
+Tic-Tac-Toe:141 index 3: O
+Tic-Tac-Toe:141 index 6: O
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 1
+Tic-Tac-Toe:141 index 1: O
+Tic-Tac-Toe:141 index 4: X
+Tic-Tac-Toe:141 index 7: _
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 2
+Tic-Tac-Toe:141 index 2: X
+Tic-Tac-Toe:141 index 5: _
+Tic-Tac-Toe:141 index 8: O
+Tic-Tac-Toe:87
+Tic-Tac-Toe:88 checking diagonal lines for player = "O":
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 0
+Tic-Tac-Toe:170 index 0: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 8: O
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 2
+Tic-Tac-Toe:170 index 2: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 6: O
+Tic-Tac-Toe:247 posible moves for player "X"
+Tic-Tac-Toe:253 move = X,O,X,O,X,X,O,_,O
+Tic-Tac-Toe:254 ["X", "O", "X", "O", "X", "X", "O", "_", "O"]
+Tic-Tac-Toe:230 state = X,O,X,O,X,X,O,_,O
+Tic-Tac-Toe:231  DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2
+Tic-Tac-Toe:59
+Tic-Tac-Toe:60 checking horizontal lines for player = "X":
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 0
+Tic-Tac-Toe:118 index 0: X
+Tic-Tac-Toe:118 index 1: O
+Tic-Tac-Toe:118 index 2: X
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 3
+Tic-Tac-Toe:118 index 3: O
+Tic-Tac-Toe:118 index 4: X
+Tic-Tac-Toe:118 index 5: X
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 6
+Tic-Tac-Toe:118 index 6: O
+Tic-Tac-Toe:118 index 7: _
+Tic-Tac-Toe:118 index 8: O
+Tic-Tac-Toe:73
+Tic-Tac-Toe:74 checking vertical lines for player = "X":
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 0
+Tic-Tac-Toe:141 index 0: X
+Tic-Tac-Toe:141 index 3: O
+Tic-Tac-Toe:141 index 6: O
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 1
+Tic-Tac-Toe:141 index 1: O
+Tic-Tac-Toe:141 index 4: X
+Tic-Tac-Toe:141 index 7: _
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 2
+Tic-Tac-Toe:141 index 2: X
+Tic-Tac-Toe:141 index 5: X
+Tic-Tac-Toe:141 index 8: O
+Tic-Tac-Toe:87
+Tic-Tac-Toe:88 checking diagonal lines for player = "X":
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 0
+Tic-Tac-Toe:170 index 0: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 8: O
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 2
+Tic-Tac-Toe:170 index 2: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 6: O
+Tic-Tac-Toe:59
+Tic-Tac-Toe:60 checking horizontal lines for player = "O":
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 0
+Tic-Tac-Toe:118 index 0: X
+Tic-Tac-Toe:118 index 1: O
+Tic-Tac-Toe:118 index 2: X
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 3
+Tic-Tac-Toe:118 index 3: O
+Tic-Tac-Toe:118 index 4: X
+Tic-Tac-Toe:118 index 5: X
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 6
+Tic-Tac-Toe:118 index 6: O
+Tic-Tac-Toe:118 index 7: _
+Tic-Tac-Toe:118 index 8: O
+Tic-Tac-Toe:73
+Tic-Tac-Toe:74 checking vertical lines for player = "O":
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 0
+Tic-Tac-Toe:141 index 0: X
+Tic-Tac-Toe:141 index 3: O
+Tic-Tac-Toe:141 index 6: O
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 1
+Tic-Tac-Toe:141 index 1: O
+Tic-Tac-Toe:141 index 4: X
+Tic-Tac-Toe:141 index 7: _
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 2
+Tic-Tac-Toe:141 index 2: X
+Tic-Tac-Toe:141 index 5: X
+Tic-Tac-Toe:141 index 8: O
+Tic-Tac-Toe:87
+Tic-Tac-Toe:88 checking diagonal lines for player = "O":
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 0
+Tic-Tac-Toe:170 index 0: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 8: O
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 2
+Tic-Tac-Toe:170 index 2: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 6: O
+Tic-Tac-Toe:279 posible moves for player "O"
+Tic-Tac-Toe:285 move = X,O,X,O,X,X,O,O,O
+Tic-Tac-Toe:286 ["X", "O", "X", "O", "X", "X", "O", "O", "O"]
+Tic-Tac-Toe:230 state = X,O,X,O,X,X,O,O,O
+Tic-Tac-Toe:231  DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3
+Tic-Tac-Toe:59
+Tic-Tac-Toe:60 checking horizontal lines for player = "X":
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 0
+Tic-Tac-Toe:118 index 0: X
+Tic-Tac-Toe:118 index 1: O
+Tic-Tac-Toe:118 index 2: X
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 3
+Tic-Tac-Toe:118 index 3: O
+Tic-Tac-Toe:118 index 4: X
+Tic-Tac-Toe:118 index 5: X
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 6
+Tic-Tac-Toe:118 index 6: O
+Tic-Tac-Toe:118 index 7: O
+Tic-Tac-Toe:118 index 8: O
+Tic-Tac-Toe:73
+Tic-Tac-Toe:74 checking vertical lines for player = "X":
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 0
+Tic-Tac-Toe:141 index 0: X
+Tic-Tac-Toe:141 index 3: O
+Tic-Tac-Toe:141 index 6: O
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 1
+Tic-Tac-Toe:141 index 1: O
+Tic-Tac-Toe:141 index 4: X
+Tic-Tac-Toe:141 index 7: O
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 2
+Tic-Tac-Toe:141 index 2: X
+Tic-Tac-Toe:141 index 5: X
+Tic-Tac-Toe:141 index 8: O
+Tic-Tac-Toe:87
+Tic-Tac-Toe:88 checking diagonal lines for player = "X":
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 0
+Tic-Tac-Toe:170 index 0: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 8: O
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 2
+Tic-Tac-Toe:170 index 2: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 6: O
+Tic-Tac-Toe:59
+Tic-Tac-Toe:60 checking horizontal lines for player = "O":
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 0
+Tic-Tac-Toe:118 index 0: X
+Tic-Tac-Toe:118 index 1: O
+Tic-Tac-Toe:118 index 2: X
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 3
+Tic-Tac-Toe:118 index 3: O
+Tic-Tac-Toe:118 index 4: X
+Tic-Tac-Toe:118 index 5: X
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 6
+Tic-Tac-Toe:118 index 6: O
+Tic-Tac-Toe:118 index 7: O
+Tic-Tac-Toe:118 index 8: O
+Tic-Tac-Toe:66 row starting with index 6 is a WINNER line for player "O"
+Tic-Tac-Toe:302 moves for O = X,O,X,O,X,X,O,O,O
+Tic-Tac-Toe:303 scores for O = -7
+Tic-Tac-Toe:304 min_score for O = -7
+Tic-Tac-Toe:305 min_score_index for O = 0
+Tic-Tac-Toe:253 move = X,O,X,O,X,_,O,X,O
+Tic-Tac-Toe:254 ["X", "O", "X", "O", "X", "_", "O", "X", "O"]
+Tic-Tac-Toe:230 state = X,O,X,O,X,_,O,X,O
+Tic-Tac-Toe:231  DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2 DEPTH 2
+Tic-Tac-Toe:59
+Tic-Tac-Toe:60 checking horizontal lines for player = "X":
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 0
+Tic-Tac-Toe:118 index 0: X
+Tic-Tac-Toe:118 index 1: O
+Tic-Tac-Toe:118 index 2: X
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 3
+Tic-Tac-Toe:118 index 3: O
+Tic-Tac-Toe:118 index 4: X
+Tic-Tac-Toe:118 index 5: _
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 6
+Tic-Tac-Toe:118 index 6: O
+Tic-Tac-Toe:118 index 7: X
+Tic-Tac-Toe:118 index 8: O
+Tic-Tac-Toe:73
+Tic-Tac-Toe:74 checking vertical lines for player = "X":
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 0
+Tic-Tac-Toe:141 index 0: X
+Tic-Tac-Toe:141 index 3: O
+Tic-Tac-Toe:141 index 6: O
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 1
+Tic-Tac-Toe:141 index 1: O
+Tic-Tac-Toe:141 index 4: X
+Tic-Tac-Toe:141 index 7: X
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 2
+Tic-Tac-Toe:141 index 2: X
+Tic-Tac-Toe:141 index 5: _
+Tic-Tac-Toe:141 index 8: O
+Tic-Tac-Toe:87
+Tic-Tac-Toe:88 checking diagonal lines for player = "X":
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 0
+Tic-Tac-Toe:170 index 0: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 8: O
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 2
+Tic-Tac-Toe:170 index 2: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 6: O
+Tic-Tac-Toe:59
+Tic-Tac-Toe:60 checking horizontal lines for player = "O":
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 0
+Tic-Tac-Toe:118 index 0: X
+Tic-Tac-Toe:118 index 1: O
+Tic-Tac-Toe:118 index 2: X
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 3
+Tic-Tac-Toe:118 index 3: O
+Tic-Tac-Toe:118 index 4: X
+Tic-Tac-Toe:118 index 5: _
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 6
+Tic-Tac-Toe:118 index 6: O
+Tic-Tac-Toe:118 index 7: X
+Tic-Tac-Toe:118 index 8: O
+Tic-Tac-Toe:73
+Tic-Tac-Toe:74 checking vertical lines for player = "O":
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 0
+Tic-Tac-Toe:141 index 0: X
+Tic-Tac-Toe:141 index 3: O
+Tic-Tac-Toe:141 index 6: O
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 1
+Tic-Tac-Toe:141 index 1: O
+Tic-Tac-Toe:141 index 4: X
+Tic-Tac-Toe:141 index 7: X
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 2
+Tic-Tac-Toe:141 index 2: X
+Tic-Tac-Toe:141 index 5: _
+Tic-Tac-Toe:141 index 8: O
+Tic-Tac-Toe:87
+Tic-Tac-Toe:88 checking diagonal lines for player = "O":
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 0
+Tic-Tac-Toe:170 index 0: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 8: O
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 2
+Tic-Tac-Toe:170 index 2: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 6: O
+Tic-Tac-Toe:279 posible moves for player "O"
+Tic-Tac-Toe:285 move = X,O,X,O,X,O,O,X,O
+Tic-Tac-Toe:286 ["X", "O", "X", "O", "X", "O", "O", "X", "O"]
+Tic-Tac-Toe:230 state = X,O,X,O,X,O,O,X,O
+Tic-Tac-Toe:231  DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3 DEPTH 3
+Tic-Tac-Toe:59
+Tic-Tac-Toe:60 checking horizontal lines for player = "X":
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 0
+Tic-Tac-Toe:118 index 0: X
+Tic-Tac-Toe:118 index 1: O
+Tic-Tac-Toe:118 index 2: X
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 3
+Tic-Tac-Toe:118 index 3: O
+Tic-Tac-Toe:118 index 4: X
+Tic-Tac-Toe:118 index 5: O
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 6
+Tic-Tac-Toe:118 index 6: O
+Tic-Tac-Toe:118 index 7: X
+Tic-Tac-Toe:118 index 8: O
+Tic-Tac-Toe:73
+Tic-Tac-Toe:74 checking vertical lines for player = "X":
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 0
+Tic-Tac-Toe:141 index 0: X
+Tic-Tac-Toe:141 index 3: O
+Tic-Tac-Toe:141 index 6: O
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 1
+Tic-Tac-Toe:141 index 1: O
+Tic-Tac-Toe:141 index 4: X
+Tic-Tac-Toe:141 index 7: X
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 2
+Tic-Tac-Toe:141 index 2: X
+Tic-Tac-Toe:141 index 5: O
+Tic-Tac-Toe:141 index 8: O
+Tic-Tac-Toe:87
+Tic-Tac-Toe:88 checking diagonal lines for player = "X":
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 0
+Tic-Tac-Toe:170 index 0: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 8: O
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 2
+Tic-Tac-Toe:170 index 2: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 6: O
+Tic-Tac-Toe:59
+Tic-Tac-Toe:60 checking horizontal lines for player = "O":
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 0
+Tic-Tac-Toe:118 index 0: X
+Tic-Tac-Toe:118 index 1: O
+Tic-Tac-Toe:118 index 2: X
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 3
+Tic-Tac-Toe:118 index 3: O
+Tic-Tac-Toe:118 index 4: X
+Tic-Tac-Toe:118 index 5: O
+Tic-Tac-Toe:62
+Tic-Tac-Toe:63 row starting with index 6
+Tic-Tac-Toe:118 index 6: O
+Tic-Tac-Toe:118 index 7: X
+Tic-Tac-Toe:118 index 8: O
+Tic-Tac-Toe:73
+Tic-Tac-Toe:74 checking vertical lines for player = "O":
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 0
+Tic-Tac-Toe:141 index 0: X
+Tic-Tac-Toe:141 index 3: O
+Tic-Tac-Toe:141 index 6: O
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 1
+Tic-Tac-Toe:141 index 1: O
+Tic-Tac-Toe:141 index 4: X
+Tic-Tac-Toe:141 index 7: X
+Tic-Tac-Toe:76
+Tic-Tac-Toe:77 column starting with index 2
+Tic-Tac-Toe:141 index 2: X
+Tic-Tac-Toe:141 index 5: O
+Tic-Tac-Toe:141 index 8: O
+Tic-Tac-Toe:87
+Tic-Tac-Toe:88 checking diagonal lines for player = "O":
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 0
+Tic-Tac-Toe:170 index 0: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 8: O
+Tic-Tac-Toe:91
+Tic-Tac-Toe:92 diagonal starting with index 2
+Tic-Tac-Toe:170 index 2: X
+Tic-Tac-Toe:170 index 4: X
+Tic-Tac-Toe:170 index 6: O
+Tic-Tac-Toe:302 moves for O = X,O,X,O,X,O,O,X,O
+Tic-Tac-Toe:303 scores for O = 0
+Tic-Tac-Toe:304 min_score for O = 0
+Tic-Tac-Toe:305 min_score_index for O = 0
+Tic-Tac-Toe:270 depth = 1
+Tic-Tac-Toe:271 moves for X = X,O,X,O,X,O,O,X,O
+Tic-Tac-Toe:272 scores for X = 0
+Tic-Tac-Toe:273 max_score for X = 0
+Tic-Tac-Toe:274 max_score_index for X = 0
+Tic-Tac-Toe:317 minimax call 0
+Tic-Tac-Toe:1 undefined
