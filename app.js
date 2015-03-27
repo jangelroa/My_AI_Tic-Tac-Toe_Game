@@ -33,7 +33,6 @@ function is_X_winner( state ) {
   return winner_is( state, "X");
 } // end of is_X_winner( state ) {}
 
-
 //*******************************************************************
 //                  is_O_winner( state )
 //*******************************************************************
@@ -44,7 +43,6 @@ function is_X_winner( state ) {
 function is_O_winner( state ) {
   return winner_is( state, "O");
 } // end of is_O_winner( state )
-
 
 //*******************************************************************
 //                winner_is( state, player )
@@ -176,37 +174,6 @@ function check_diagonal_lines( state, index, player ) {
   return is_this_a_winner_line;
 } // end of check_diagonal_lines( state, index, player )
 
-// state indexes
-// var state = [ 0, 1, 2,
-
-//               3, 4, 5,
-
-//               6, 7, 8
-//             ];
-
-// var state = [ "O", "_", "O",
-
-//               "O", "X", "_",
-
-//               "X", "_", "X"
-//             ];
-
-
-var state = [ "O", "_", "_",
-
-              "O", "X", "_",
-
-              "_", "_", "X"
-            ];
-
-// if(is_X_winner( state )) {
-//   console.log( "\"X\" is the WINNER" );
-// } else if(is_O_winner( state )) {
-//   console.log( "\"O\" is the WINNER" );
-// }else {
-//   console.log( "There is NO Winner" );
-// }
-
 //*******************************************************************
 //              board_is_full( state )
 //*******************************************************************
@@ -221,7 +188,6 @@ function board_is_full( state ) {
   }
   return true;
 } // end of board_is_full( state )
-
 
 //*******************************************************************
 //              minimax( state, depth )
@@ -253,7 +219,7 @@ function minimax( state, depth ) {
   var moves = [];
 
 // if it's X's turn, get the max score
-  if( (depth % 2) !== 0 ){
+  if( (depth % 2) === 0 ){
     // Create all possible moves (states)
     for( var i = 0 ; i < state.length ; i++ ) {
       if( state[i] === "_" ){
@@ -323,7 +289,7 @@ function minimax( state, depth ) {
     var min_score_index = 0;
     var min_score = scores[0];
     for(var i = 1 ; i < scores.length ; i++ ) {
-      if( scores[i] > min_score ) {
+      if( scores[i] < min_score ) {
         min_score_index = i;
         min_score = scores[i];
       }
@@ -346,10 +312,49 @@ function minimax( state, depth ) {
   }
 
 
+// state indexes
+// var state = [ 0, 1, 2,
+
+//               3, 4, 5,
+
+//               6, 7, 8
+//             ];
+
+// var state = [ "O", "_", "O",
+
+//               "O", "X", "_",
+
+//               "X", "_", "X"
+//             ];
+
+
+var state = [ "O", "X", "_",
+
+              "X", "X", "O",
+
+              "O", "O", "X"
+            ];
+
+
+// var state = [ "O", "O", "_",
+
+//               "O", "X", "X",
+
+//               "_", "_", "X"
+//             ];
+
+
+// if(is_X_winner( state )) {
+//   console.log( "\"X\" is the WINNER" );
+// } else if(is_O_winner( state )) {
+//   console.log( "\"O\" is the WINNER" );
+// }else {
+//   console.log( "There is NO Winner" );
+// }
 
 
 } // end of minimax( state, depth )
 
-
-console.log("minimax call " + minimax( state, 0 ));
+var depth = -1;
+console.log("minimax call " + minimax( state, depth ));
 
